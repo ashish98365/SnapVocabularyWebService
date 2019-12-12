@@ -14,6 +14,9 @@ docker run --rm -v $PWD:/app -v /root/.m2:/root/.m2 -w /app maven:3-alpine "$@"
 docker stop snapvocabularyservice
 docker rm snapvocabularyservice
 
+#Copy jar file
+cp -f target/*.jar .
+
 #Creating Image
 docker build -t snapvocabularyservice -f  src/main/docker/Dockerfile .
 
