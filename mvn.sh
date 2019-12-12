@@ -15,9 +15,7 @@ docker stop snapvocabularyservice
 docker rm snapvocabularyservice
 
 #Copy jar file
-echo "$PWD"
-ll $PWD
-cp -f target/*.jar .
+#cp -f target/*.jar .
 
 #Creating Image
 docker build -t snapvocabularyservice -f  src/main/docker/Dockerfile .
