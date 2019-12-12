@@ -7,7 +7,7 @@ echo "*********************************"
 WORKSPACE=/home/ashish/jenkins-data/jenkins_home/workspace/pipe-job
 
 #Creating Jar File
-docker run --rm -v $PWD:/app -v /root/.m2:/root/.m2 -w /app maven:3-alpine "$@"
+docker run --rm -v /home/ashish/jenkins-data/jenkins_home/workspace/snap-vocabulary-service/:/app -v /root/.m2:/root/.m2 -w /app maven:3-alpine "$@"
 
 
 #Deleting container if their is any
